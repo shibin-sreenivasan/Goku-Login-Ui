@@ -22,6 +22,8 @@ body{
     object-fit:cover;
     
     z-index:-2;
+    transform:translateZ(0);
+    will-change:transform;
 }
 
 /* Overlay */
@@ -46,15 +48,15 @@ body{
     padding:40px;
 
     background: rgba(15,23,42,.35);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(8px);
 
     border:1px solid rgba(255,255,255,.18);
     border-radius:25px;
 
     overflow:hidden;
 
-    animation:glow 3s infinite alternate;
+    box-shadow:0 0 20px rgba(0,191,255,.5);
     transition:.5s;
 }
 
@@ -287,14 +289,154 @@ span:hover{
 }
 
 /* Neon Glow */
-@keyframes glow{
-    from{
-        box-shadow:
-        0 0 15px #00bfff;
+
+
+/* ==========================================
+   RESPONSIVE + MOBILE PERFORMANCE FIX
+========================================== */
+
+/* Tablets */
+@media screen and (max-width:768px){
+
+    body{
+        padding:20px;
+        overflow:hidden;
     }
-    to{
+
+    .container{
+        width:100%;
+        max-width:360px;
+        height:auto;
+    }
+
+    .form-box{
+        padding:25px;
+
+        background:rgba(15,23,42,.55);
+
+        backdrop-filter:blur(5px);
+        -webkit-backdrop-filter:blur(5px);
+
+        animation:none;
+
         box-shadow:
-        0 0 30px #00bfff,
-        0 0 60px #00bfff;
+        0 0 10px rgba(0,191,255,.5);
+    }
+
+    h2{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .input-box input{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .btn{
+        padding:12px;
+        font-size:15px;
+    }
+
+    .social{
+        gap:10px;
+    }
+
+    .social button{
+        width:42px;
+        height:42px;
+        font-size:15px;
+    }
+
+    p,
+    .forgot{
+        font-size:14px;
+    }
+
+    /* Disable heavy effects */
+    .form-box::before{
+        display:none;
+    }
+
+    .social button:hover{
+        transform:none;
+    }
+
+    .btn:hover{
+        transform:none;
+    }
+
+    /* Reduce video processing */
+    #bg-video{
+        filter:brightness(1.1);
+    }
+}
+
+/* Small Phones */
+@media screen and (max-width:480px){
+
+    .container{
+        max-width:320px;
+    }
+
+    .form-box{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    .input-box input{
+        padding:11px;
+    }
+
+    .btn{
+        padding:11px;
+    }
+
+    .social button{
+        width:40px;
+        height:40px;
+        font-size:14px;
+    }
+
+    p{
+        font-size:13px;
+    }
+
+    .forgot{
+        font-size:13px;
+    }
+}
+
+/* Very Small Phones */
+@media screen and (max-width:360px){
+
+    .container{
+        max-width:290px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    .form-box{
+        padding:18px;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    #bg-video{
+        display:none;
+    }
+
+    body{
+        background:url("goku.jpg");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
     }
 }
