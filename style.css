@@ -6,11 +6,11 @@
 }
 
 body{
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:20px;
 }
 
 /* Background Video */
@@ -38,7 +38,7 @@ body{
 .container{
     position:relative;
     width:420px;
-    height:540px;
+    min-height:540px;
 }
 
 /* Glass Card */
@@ -412,31 +412,25 @@ span:hover{
 }
 
 /* Very Small Phones */
-@media screen and (max-width:360px){
+@media screen and (max-width:768px){
 
-    .container{
-        max-width:290px;
+    body{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
     }
 
-    h2{
-        font-size:22px;
+    .container{
+        width:100%;
+        max-width:340px;
+        height:auto;
     }
 
     .form-box{
-        padding:18px;
-    }
-}
-
-@media screen and (max-width:768px){
-
-    #bg-video{
-        display:none;
-    }
-
-    body{
-        background:url("goku.jpg");
-        background-size:cover;
-        background-position:center;
-        background-repeat:no-repeat;
+        position:relative;
+        width:100%;
+        padding:25px;
     }
 }
