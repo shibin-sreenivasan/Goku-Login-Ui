@@ -1,88 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anime Login</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<div class="particles"></div>
+
 <body>
 
-<video autoplay muted loop playsinline id="bg-video">
-    <source src="goku-ultra-instinct-dragon-ball-desktop-wallpaperwaifu.com (1).mp4" type="video/mp4">
-</video>
+    <!-- Particles -->
+    <div class="particles"></div>
 
-<div class="overlay"></div>
+    <!-- Background Video -->
+    <video
+        id="bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto">
+        <source src="goku-ultra-instinct-dragon-ball-desktop-wallpaperwaifu.com (1).mp4" type="video/mp4">
+    </video>
 
-<div class="container">
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
 
-    <div class="form-box login">
-        <h2>Welcome Back</h2>
+    <!-- Main Container -->
+    <div class="container">
 
-        <div class="input-box">
-            <input type="email" placeholder="Email">
+        <!-- Login Form -->
+        <div class="form-box login">
+
+            <h2>Welcome Back</h2>
+
+            <div class="input-box">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password">
+            </div>
+
+            <a href="#" class="forgot">Forgot Password?</a>
+
+            <button class="btn">Login</button>
+
+            <div class="social">
+                <button><i class="fab fa-google"></i></button>
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-github"></i></button>
+            </div>
+
+            <p>
+                Don't have an account?
+                <span id="show-register">Register</span>
+            </p>
+
         </div>
 
-        <div class="input-box">
-            <input type="password" placeholder="Password">
+        <!-- Register Form -->
+        <div class="form-box register">
+
+            <h2>Create Account</h2>
+
+            <div class="input-box">
+                <input type="text" placeholder="Name">
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password">
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password">
+            </div>
+
+            <button class="btn">Register</button>
+
+            <p class="or">OR</p>
+
+            <div class="social">
+                <button><i class="fab fa-google"></i></button>
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-github"></i></button>
+            </div>
+
+            <p>
+                Already have an account?
+                <span id="show-login">Login</span>
+            </p>
+
         </div>
 
-        <a href="#" class="forgot">Forgot Password?</a>
-
-        <button class="btn">Login</button>
-
-        <div class="social">
-            <button><i class="fab fa-google"></i></button>
-            <button><i class="fab fa-facebook-f"></i></button>
-            <button><i class="fab fa-github"></i></button>
-        </div>
-
-        <p>
-            Don't have an account?
-            <span id="show-register">Register</span>
-        </p>
     </div>
 
-    <div class="form-box register">
-        <h2>Create Account</h2>
+    <script src="script.js"></script>
 
-        <div class="input-box">
-            <input type="text" placeholder="Name">
-        </div>
-
-        <div class="input-box">
-            <input type="email" placeholder="Email">
-        </div>
-
-        <div class="input-box">
-            <input type="password" placeholder="Password">
-        </div>
-
-        <div class="input-box">
-            <input type="password" placeholder="Confirm Password">
-        </div>
-
-        <button class="btn">Register</button>
-
-        <p class="or">OR</p>
-
-        <div class="social">
-        <button><i class="fab fa-google"></i></button>
-        <button><i class="fab fa-facebook-f"></i></button>
-        <button><i class="fab fa-github"></i></button>
-        </div>
-        
-        <p>
-            Already have an account?
-            <span id="show-login">Login</span>
-        </p>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
